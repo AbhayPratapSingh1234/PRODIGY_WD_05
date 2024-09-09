@@ -7,17 +7,16 @@
 
 body {
 	background: linear-gradient(123deg, green, blue);
-	justify-content: center;
-	align-items: center;
+
 }
 
 .card {
-	width: 90%;
-	max-width: 470px;
+	width: 80%;
+	max-width: 550px;
 	background: linear-gradient(135deg, #00feba, #5b5b5b);
 	color: #fff;
 	border-radius: 40px;
-	padding: 40px 35px;
+	padding: 20px 10px;
 	margin: 100px auto 0;
 	text-align: center;
 
@@ -35,7 +34,7 @@ body {
 	outline: 0;
 	background: #ebfffc;
 	color: #555;
-	padding: 10px 25px;
+	padding: 10px 5px;
 	height: 60px;
 	border-radius: 30px;
 	flex: 1;
