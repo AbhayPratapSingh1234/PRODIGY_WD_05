@@ -12,7 +12,8 @@ const forecastImg4 = document.querySelector(".forcaste-img5");
 const forecastImg5 = document.querySelector(".forcaste-img6");
 const forecastImg6 = document.querySelector(".forcaste-img7");
 const forecastImg7 = document.querySelector(".forcaste-img8");
-const weather = document.querySelectorAll(".weather-like", ".weather-like1", ".weather-like2", ".weather-like3", ".weather-like4", ".weather-like5", ".weather-like6", ".weather-like7");
+const forecastImg8 = document.querySelector(".forcaste-img9");
+const weather = document.querySelectorAll(".weather-like", ".weather-like1", ".weather-like2", ".weather-like3", ".weather-like4", ".weather-like5", ".weather-like6", ".weather-like7",".weather-like8");
 
 async function checkWeather(city) {
   const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
@@ -46,27 +47,32 @@ async function checkWeather(city) {
   document.querySelector(".day4").innerHTML = data1.list[4].dt_txt;
   document.querySelector(".max-temp3").innerHTML = Math.round(data1.list[4].main.feels_like) + "°c";
   document.querySelector(".min-temp3").innerHTML = Math.round(data1.list[4].main.temp_max) + "°c";
-  document.querySelector(".weather-like3").innerHTML = data1.list[1].weather[0].description;
+  document.querySelector(".weather-like3").innerHTML = data1.list[4].weather[0].description;
   //day 5
   document.querySelector(".day5").innerHTML = data1.list[5].dt_txt;
   document.querySelector(".max-temp4").innerHTML = Math.round(data1.list[5].main.feels_like) + "°c";
   document.querySelector(".min-temp4").innerHTML = Math.round(data1.list[5].main.temp_max) + "°c";
-  document.querySelector(".weather-like4").innerHTML = data1.list[1].weather[0].description;
+  document.querySelector(".weather-like4").innerHTML = data1.list[5].weather[0].description;
   //day6
   document.querySelector(".day6").innerHTML = data1.list[6].dt_txt;
   document.querySelector(".max-temp5").innerHTML = Math.round(data1.list[6].main.feels_like) + "°c";
   document.querySelector(".min-temp5").innerHTML = Math.round(data1.list[6].main.temp_max) + "°c";
-  document.querySelector(".weather-like5").innerHTML = data1.list[1].weather[0].description;
+  document.querySelector(".weather-like5").innerHTML = data1.list[6].weather[0].description;
   //day7
   document.querySelector(".day7").innerHTML = data1.list[7].dt_txt;
   document.querySelector(".max-temp6").innerHTML = Math.round(data1.list[7].main.feels_like) + "°c";
   document.querySelector(".min-temp6").innerHTML = Math.round(data1.list[7].main.temp_max) + "°c";
-  document.querySelector(".weather-like6").innerHTML = data1.list[1].weather[0].description;
+  document.querySelector(".weather-like6").innerHTML = data1.list[7].weather[0].description;
   //day 8
   document.querySelector(".day8").innerHTML = data1.list[8].dt_txt;
   document.querySelector(".max-temp7").innerHTML = Math.round(data1.list[8].main.feels_like) + "°c";
   document.querySelector(".min-temp7").innerHTML = Math.round(data1.list[8].main.temp_max) + "°c";
-  document.querySelector(".weather-like7").innerHTML = data1.list[1].weather[0].description;
+  document.querySelector(".weather-like7").innerHTML = data1.list[8].weather[0].description;
+  //day 9
+  document.querySelector(".day9").innerHTML = data1.list[9].dt_txt;
+  document.querySelector(".max-temp8").innerHTML = Math.round(data1.list[9].main.feels_like) + "°c";
+  document.querySelector(".min-temp8").innerHTML = Math.round(data1.list[9].main.temp_max) + "°c";
+  document.querySelector(".weather-like8").innerHTML = data1.list[9].weather[0].description;
   //forecast weather image 
 
   if (data1.list[1].weather[0].main == "Clouds") {
@@ -91,6 +97,9 @@ async function checkWeather(city) {
   }
   if (data1.list[1].weather[0].main == "Haze" && data1.list[1].weather[0].description == "haze") {
     forecastImg.src = "cloud-mist.png";
+  }
+  if (data1.list[1].weather[0].main == "Clouds" && data1.list[1].weather[0].description == "scattered clouds") {
+    forecastImg.src = "clouds1.png";
   }
 
 
@@ -117,6 +126,9 @@ async function checkWeather(city) {
   if (data1.list[2].weather[0].main == "Haze" && data1.list[2].weather[0].description == "haze") {
     forecastImg1.src = "cloud-mist.png";
   }
+  if (data1.list[2].weather[0].main == "Clouds" && data1.list[2].weather[0].description == "scattered clouds") {
+    forecastImg1.src = "clouds1.png";
+  }
 
 
   if (data1.list[3].weather[0].main == "Clouds") {
@@ -142,6 +154,11 @@ async function checkWeather(city) {
   if (data1.list[3].weather[0].main == "Haze" && data1.list[3].weather[0].description == "haze") {
     forecastImg2.src = "cloud-mist.png";
   }
+  if (data1.list[3].weather[0].main == "Clouds" && data1.list[3].weather[0].description == "scattered clouds") {
+    forecastImg2.src = "clouds1.png";
+  }
+
+
 
 
   if (data1.list[4].weather[0].main == "Clouds") {
@@ -167,6 +184,11 @@ async function checkWeather(city) {
   if (data1.list[4].weather[0].main == "Haze" && data1.list[4].weather[0].description == "haze") {
     forecastImg3.src = "cloud-mist.png";
   }
+  if (data1.list[4].weather[0].main == "Clouds" && data1.list[4].weather[0].description == "scattered clouds") {
+    forecastImg3.src = "clouds1.png";
+  }
+
+
 
 
   if (data1.list[5].weather[0].main == "Clouds") {
@@ -192,6 +214,11 @@ async function checkWeather(city) {
   if (data1.list[5].weather[0].main == "Haze" && data1.list[5].weather[0].description == "haze") {
     forecastImg4.src = "cloud-mist.png";
   }
+  if (data1.list[5].weather[0].main == "Clouds" && data1.list[5].weather[0].description == "scattered clouds") {
+    forecastImg4.src = "clouds1.png";
+  }
+
+
 
   if (data1.list[6].weather[0].main == "Clouds") {
     forecastImg5.src = "cloud-mist.png";
@@ -216,6 +243,11 @@ async function checkWeather(city) {
   if (data1.list[6].weather[0].main == "Haze" && data1.list[6].weather[0].description == "haze") {
     forecastImg5.src = "cloud-mist.png";
   }
+  if (data1.list[6].weather[0].main == "Clouds" && data1.list[6].weather[0].description == "scattered clouds") {
+    forecastImg5.src = "clouds1.png";
+  }
+
+
 
 
   if (data1.list[7].weather[0].main == "Clouds") {
@@ -241,6 +273,11 @@ async function checkWeather(city) {
   if (data1.list[7].weather[0].main == "Haze" && data1.list[7].weather[0].description == "haze") {
     forecastImg6.src = "cloud-mist.png";
   }
+  if (data1.list[7].weather[0].main == "Clouds" && data1.list[7].weather[0].description == "scattered clouds") {
+    forecastImg6.src = "clouds1.png";
+  }
+
+
 
   if (data1.list[8].weather[0].main == "Clouds") {
     forecastImg7.src = "cloud-mist.png";
@@ -265,6 +302,40 @@ async function checkWeather(city) {
   if (data1.list[8].weather[0].main == "Haze" && data1.list[8].weather[0].description == "haze") {
     forecastImg7.src = "cloud-mist.png";
   }
+  if (data1.list[8].weather[0].main == "Clouds" && data1.list[8].weather[0].description == "scattered clouds") {
+    forecastImg7.src = "clouds1.png";
+  }
+
+
+
+  if (data1.list[9].weather[0].main == "Clouds") {
+    forecastImg8.src = "cloud-mist.png";
+  }
+
+  if (data1.list[9].weather[0].main == "Rain") {
+    forecastImg8.src = "cloud-rain.png";
+  }
+  if (data1.list[9].weather[0].main == "Clear") {
+    forecastImg8.src = "sun1.png";
+  }
+
+  if (data1.list[9].weather[0].main == "Mist") {
+    forecastImg8.src = "cloud-mist.png";
+  }
+  if (data1.list[9].weather[0].main == "Clouds" && data1.list[9].weather[0].description == "overcast clouds") {
+    forecastImg8.src = "cloud.png";
+  }
+  if (data1.list[9].weather[0].main == "Clouds" && data1.list[9].weather[0].description == "broken clouds") {
+    forecastImg8.src = "clouds1.png";
+  }
+  if (data1.list[9].weather[0].main == "Haze" && data1.list[9].weather[0].description == "haze") {
+    forecastImg8.src = "cloud-mist.png";
+  }
+  if (data1.list[9].weather[0].main == "Clouds" && data1.list[9].weather[0].description == "scattered clouds") {
+    forecastImg8.src = "clouds1.png";
+  }
+
+
 
   //real  time weather image
   if (data.weather[0].main == "Clouds") {

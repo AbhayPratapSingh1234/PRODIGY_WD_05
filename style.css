@@ -7,6 +7,8 @@
 
 body {
 	background: linear-gradient(123deg, green, blue);
+	justify-content: center;
+	align-items: center;
 }
 
 .card {
@@ -100,7 +102,7 @@ body {
 	margin-top: -6px;
 }
 
-.boxs img {
+.boxs img{
 	height: 100px;
 	width: 100px;
 	max-width: 100px;
@@ -113,13 +115,52 @@ body {
 	text-align: center;
 	display: flex;
 	height: 280px;
-	justify-content: safe;
+	align-items:center ;
+    justify-items: center;
+
+}
+
+
+.box2 img{
+	height: 100px;
+	width: 100px;
+	max-width: 100px;
+	text-align: center;
+
+}
+
+.box2 {
+	margin-left: 10px;
+	text-align: center;
+	display: flex;
+	height: 280px;
+	align-items:center ;
+    justify-items: center;
+
+}
+
+.boxes1 img{
+	height: 100px;
+	width: 100px;
+	max-width: 100px;
+	text-align: center;
+
+}
+.boxes1 {
+	margin-left: 10px;
+	text-align: center;
+	display: flex;
+	height: 280px;
+	align-items:center ;
+    justify-items: center;
+
 }
 
 .box {
 	border: 2px solid goldenrod;
 	border-radius: 10px;
 	background-color: #ebfffc;
+	justify-content: center;
 }
 
 h4 {
@@ -135,6 +176,7 @@ h4:hover {
 	text-decoration: overline;
 
 }
+
 @media(max-width:600px){
 	html{
 	  font-size: 80%;
