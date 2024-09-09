@@ -37,7 +37,6 @@ body {
 	height: 60px;
 	border-radius: 30px;
 	flex: 1;
-	margin-right: 16px;
 	font-size: 18px;
 }
 
@@ -45,7 +44,7 @@ body {
 	border: 2px solid green;
 	outline: 0;
 	background: rgb(192, 186, 170);
-	border-radius: 50%;
+	border-radius: 35%;
 	font-size: 40px;
 	color: #15127c;
 	cursor: pointer;
@@ -136,3 +135,15 @@ h4:hover {
 	text-decoration: overline;
 
 }
+@media(max-width:600px){
+	html{
+	  font-size: 80%;
+	}
+  }
+  @media(max-width:600px){
+	.box{
+	  height: 20rem;
+	  width: 10rem;
+	}
+  }
+  
